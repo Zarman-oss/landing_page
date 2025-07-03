@@ -412,7 +412,7 @@ nav button {
 
 .banner_image {
   width: 100%;
-  border: 4px solid #b9ffad;
+
   border-radius: clamp(40px, 10vw, 68px) 0 clamp(40px, 10vw, 68px) clamp(40px, 10vw, 68px);
 }
 
@@ -1705,3 +1705,14 @@ System: .8px);
     padding: clamp(1rem, 3vw, 1.5rem);
   }
 }
+
+@media (min-width: 1400px) {
+  .floating_box_2.bottom_left{
+    right: -5rem;
+  }
+  .floating_box.top_left{
+    left: -4rem;
+  }
+}
+
+
