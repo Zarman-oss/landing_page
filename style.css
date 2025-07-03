@@ -310,6 +310,8 @@
   background: linear-gradient(135deg, #023c38, #045e59);
 }
 
+/* navbar */
+
 nav {
   display: flex;
   color: var(--nav-heading-color);
@@ -367,6 +369,8 @@ nav button {
   display: flex;
   gap: 1rem;
 }
+
+
 
 /* Banner Section */
 .banner_container {
@@ -497,9 +501,44 @@ nav button {
 }
 
 .floating_box_2.bottom_left {
+  position: absolute;
+  background: #eafbf1;
+  padding: 1rem;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 20px;
+  backdrop-filter: blur(20px);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.875rem;
+  color: black;
+  z-index: 2;
   top: 8rem;
   right: -7rem;
+  /* Continuous up-and-down animation */
+  animation: floatUpDown 2s ease-in-out infinite;
+  /* Smooth transition for hover effects */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Hover effect: slight lift and shadow */
+.floating_box_2.bottom_left:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* Pause the float animation on hover for better interaction */
+  animation-play-state: paused;
+}
+
+/* Continuous up-and-down animation keyframes */
+@keyframes floatUpDown {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+
 
 .banner_logos {
   z-index: 1;
@@ -766,6 +805,14 @@ nav button {
   display: block;
 }
 
+.podcast_video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-top-left-radius: 68px;
+  border-bottom-right-radius: 68px;
+  border-bottom-left-radius: 68px;
+}
+
 .podcast_play_circle {
   position: absolute;
   width: 110px;
@@ -781,6 +828,7 @@ nav button {
   justify-content: center;
   align-items: center;
   transition: transform 0.2s ease;
+  cursor: pointer;
 }
 
 .podcast_play_circle:hover {
@@ -1083,7 +1131,6 @@ nav button {
   width: 50%;
 }
 
-
 .faq_item_1 {
   max-width: 815px;
   padding: 24px;
@@ -1094,11 +1141,43 @@ nav button {
   font-family: var(--font-heading);
   font-weight: 800;
   font-size: 20px;
-  align-items: center;
   line-height: 30px;
   display: flex;
+  flex-direction: column;
   gap: 12px;
-  justify-content: space-between;
+}
+
+.faq_item_1.expanded {
+  background: linear-gradient(135deg, #f1f8f4 0%, #e7f6f5 100%);
+  border: none;
+  border-radius: 12px;
+  position: relative;
+}
+
+.faq_item_1.expanded::before {
+  content: '';
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(120px);
+  z-index: -1;
+  width: 260px;
+  height: 260px;
+  background: var(--cyan);
+  top: 126px;
+  left: 80%;
+}
+
+.faq_item_1.expanded::after {
+  content: '';
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(120px);
+  z-index: -1;
+  width: 260px;
+  height: 260px;
+  background: var(--cyan);
+  top: -128px;
+  left: -10%;
 }
 
 .faq_item {
@@ -1150,6 +1229,25 @@ nav button {
   left: -10%;
 }
 
+.faq_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.faq_toggle_icon {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.faq_content {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  color: #5d5d5d;
+  line-height: 1.5;
+}
 /* Newsletter */
 .newsletter_section {
   position: relative;
@@ -1376,6 +1474,7 @@ nav button {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+
   .banner_container {
     flex-direction: column;
     align-items: flex-start;

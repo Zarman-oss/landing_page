@@ -127,10 +127,10 @@
         <!-- Banner Logos -->
         <div class="banner_logos">
           <img src="./img/Airbnb.png" alt="Airbnb Logo" />
-          <img src="./img/Airbnb.png" alt="Airbnb Logo" />
-          <img src="./img/Airbnb.png" alt="Airbnb Logo" />
-          <img src="./img/Airbnb.png" alt="Airbnb Logo" />
-          <img src="./img/Airbnb.png" alt="Airbnb Logo" />
+          <img src="./img/bannerlogo1.png" alt="Airbnb Logo" />
+          <img src="./img/bannerlogo2.png" alt="Airbnb Logo" />
+          <img src="./img/bannerlogo3.png" alt="Airbnb Logo" />
+          <img src="./img/bannerlogo4.png" alt="Airbnb Logo" />
         </div>
       </section>
     </div>
@@ -255,7 +255,20 @@
                 alt="Podcast Episode Preview"
                 class="podcast_image"
               />
-              <span class="podcast_play_circle">
+              <iframe
+                class="podcast_video"
+                style="display: none"
+                width="100%"
+                height="auto"
+                src="https://www.youtube.com/embed/sNCjgCYrxDc?si=tchmiDYVWmgSRXTw"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+
+              <span class="podcast_play_circle" onclick="playVideo()">
                 <img src="./img/arrow.png" alt="Play Podcast" />
               </span>
             </div>
@@ -467,21 +480,78 @@
               </p>
             </div>
 
-            <div class="faq_item_1">
-              <h3>This is how I work</h3>
-              <img src="./img/add sign.png" alt="" />
+            <div class="faq_item_1" data-expanded="false">
+              <div class="faq_title">
+                <h3>This is how I work</h3>
+                <img
+                  src="./img/add sign.png"
+                  alt="Toggle FAQ"
+                  class="faq_toggle_icon"
+                  onclick="toggleFAQ(this)"
+                />
+              </div>
+              <div class="faq_content" style="display: none">
+                <p>
+                  I collaborate closely with clients to understand their goals
+                  and tailor strategies that align with their vision. My process
+                  involves in-depth research, iterative feedback, and
+                  data-driven optimizations to ensure your brand stands out.
+                </p>
+              </div>
             </div>
-            <div class="faq_item_1">
-              <h3>This is who I work with</h3>
-              <img src="./img/add sign.png" alt="" />
+            <div class="faq_item_1" data-expanded="false">
+              <div class="faq_title">
+                <h3>This is who I work with</h3>
+                <img
+                  src="./img/add sign.png"
+                  alt="Toggle FAQ"
+                  class="faq_toggle_icon"
+                  onclick="toggleFAQ(this)"
+                />
+              </div>
+              <div class="faq_content" style="display: none">
+                <p>
+                  I work with entrepreneurs, small businesses, and professionals
+                  looking to elevate their online presence, particularly on
+                  platforms like LinkedIn, to attract their ideal audience.
+                </p>
+              </div>
             </div>
-            <div class="faq_item_1">
-              <h3>This is my style</h3>
-              <img src="./img/add sign.png" alt="" />
+            <div class="faq_item_1" data-expanded="false">
+              <div class="faq_title">
+                <h3>This is my style</h3>
+                <img
+                  src="./img/add sign.png"
+                  alt="Toggle FAQ"
+                  class="faq_toggle_icon"
+                  onclick="toggleFAQ(this)"
+                />
+              </div>
+              <div class="faq_content" style="display: none">
+                <p>
+                  My style is bold, authentic, and strategic, blending
+                  creativity with analytics to craft compelling narratives that
+                  resonate with your target audience.
+                </p>
+              </div>
             </div>
-            <div class="faq_item_1">
-              <h3>This is how much I charge</h3>
-              <img src="./img/add sign.png" alt="" />
+            <div class="faq_item_1" data-expanded="false">
+              <div class="faq_title">
+                <h3>This is how much I charge</h3>
+                <img
+                  src="./img/add sign.png"
+                  alt="Toggle FAQ"
+                  class="faq_toggle_icon"
+                  onclick="toggleFAQ(this)"
+                />
+              </div>
+              <div class="faq_content" style="display: none">
+                <p>
+                  My pricing is tailored to the scope of each project. Contact
+                  me to discuss your needs, and I’ll provide a customized quote
+                  that fits your budget and goals.
+                </p>
+              </div>
             </div>
 
             <button class="cta_button" type="button">
@@ -605,6 +675,43 @@
           item.classList.toggle('expanded');
         });
       });
+
+      function playVideo() {
+        const image = document.querySelector('.podcast_image');
+        const video = document.querySelector('.podcast_video');
+        const playCircle = document.querySelector('.podcast_play_circle');
+
+        image.style.display = 'none';
+        video.style.display = 'block';
+        playCircle.style.display = 'none';
+
+        // Trigger YouTube video playback
+        video.contentWindow.postMessage(
+          '{"event":"command","func":"playVideo","args":""}',
+          '*'
+        );
+      }
+
+      function toggleFAQ(element) {
+        const faqItem = element.closest('.faq_item_1');
+        const content = faqItem.querySelector('.faq_content');
+        const icon = faqItem.querySelector('.faq_toggle_icon');
+        const isExpanded = faqItem.getAttribute('data-expanded') === 'true';
+
+        if (isExpanded) {
+          content.style.display = 'none';
+          faqItem.setAttribute('data-expanded', 'false');
+          faqItem.classList.remove('expanded');
+          icon.src = './img/add sign.png';
+          icon.alt = 'Toggle FAQ';
+        } else {
+          content.style.display = 'block';
+          faqItem.setAttribute('data-expanded', 'true');
+          faqItem.classList.add('expanded');
+          icon.src = './img/minus sign.png';
+          icon.alt = 'Collapse FAQ';
+        }
+      }
     </script>
   </body>
 </html>
