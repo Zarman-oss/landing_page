@@ -3,7 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Font Preloading -->
+    <meta
+      name="description"
+      content="OptiFolio by Abdullah Noman offers expert copywriting and brand strategy services to elevate your business."
+    />
+    <meta
+      name="keywords"
+      content="copywriting, brand strategy, digital marketing, LinkedIn optimization, Abdullah Noman"
+    />
+    <meta name="author" content="Abdullah Noman" />
+    <meta
+      property="og:title"
+      content="OptiFolio - Copywriting & Brand Strategy"
+    />
+    <meta
+      property="og:description"
+      content="Elevate your brand with expert copywriting and strategy by Abdullah Noman."
+    />
+    <meta property="og:image" content="https://yourdomain.com/img/noman.png" />
+    <meta property="og:url" content="https://yourdomain.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Font Preloading (Removed unused fonts for performance) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,28 +32,11 @@
       as="style"
     />
     <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-      as="style"
-    />
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700;800&display=swap"
-      as="style"
-    />
-    <link
       href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="manifest" href="/manifest.json" />
     <title>OptiFolio - Copywriting & Brand Strategy</title>
   </head>
   <body>
@@ -47,14 +50,18 @@
 
           <!-- Hamburger Menu -->
           <label class="hamburger" for="hamburger-toggle">
-            <input type="checkbox" id="hamburger-toggle" />
+            <input
+              type="checkbox"
+              id="hamburger-toggle"
+              aria-label="Toggle navigation menu"
+            />
             <span></span>
             <span></span>
             <span></span>
           </label>
 
           <!-- Navigation Items -->
-          <div class="nav_items" id="navMenu">
+          <div class="nav_items" id="navMenu" aria-expanded="false">
             <ul>
               <li><a href="/index.html">Home</a></li>
               <li><a href="/copywriting.html">Copywriting</a></li>
@@ -63,7 +70,9 @@
               <li><a href="/speaking.html">Speaking</a></li>
               <li><a href="/newsletter.html">Newsletter</a></li>
             </ul>
-            <button type="button">Say Hi</button>
+            <button type="button" aria-label="Contact Abdullah Noman">
+              Say Hi
+            </button>
           </div>
         </nav>
       </header>
@@ -83,14 +92,20 @@
           </div>
 
           <div class="cta_section">
-            <button class="cta_button" type="button">Need a Word</button>
+            <button
+              class="cta_button"
+              type="button"
+              aria-label="Request copywriting services"
+            >
+              Need a Word
+            </button>
 
             <div class="social_proof">
               <div class="avatars">
                 <img src="./img/pfp.png" alt="Customer Avatar 1" />
-                <img src="./img/pfp.png" alt="Customer Avatar 2" />
-                <img src="./img/pfp.png" alt="Customer Avatar 3" />
-                <img src="./img/pfp.png" alt="Customer Avatar 4" />
+                <img src="./img/avatar1.png" alt="Customer Avatar 2" />
+                <img src="./img/avatar2.png" alt="Customer Avatar 3" />
+                <img src="./img/avatar3.png" alt="Customer Avatar 4" />
               </div>
               <div class="customer_count">
                 <span class="count">750k+</span>
@@ -110,6 +125,7 @@
             "
             sizes="(max-width: 768px) 100vw, 50vw"
             alt="Abdullah Noman, Copywriter and Brand Strategist"
+            loading="lazy"
           />
 
           <div class="floating_box top_left">
@@ -126,11 +142,31 @@
 
         <!-- Banner Logos -->
         <div class="banner_logos">
-          <img src="./img/Airbnb.png" alt="Airbnb Logo" />
-          <img src="./img/bannerlogo1.png" alt="Airbnb Logo" />
-          <img src="./img/bannerlogo2.png" alt="Airbnb Logo" />
-          <img src="./img/bannerlogo3.png" alt="Airbnb Logo" />
-          <img src="./img/bannerlogo4.png" alt="Airbnb Logo" />
+          <img
+            class="banner_logo_item"
+            src="./img/Airbnb.png"
+            alt="Airbnb Logo"
+          />
+          <img
+            class="banner_logo_item"
+            src="./img/bannerlogo1.png"
+            alt="Brand 1 Logo"
+          />
+          <img
+            class="banner_logo_item"
+            src="./img/bannerlogo2.png"
+            alt="Brand 2 Logo"
+          />
+          <img
+            class="banner_logo_item"
+            src="./img/bannerlogo3.png"
+            alt="Brand 3 Logo"
+          />
+          <img
+            class="banner_logo_item"
+            src="./img/bannerlogo4.png"
+            alt="Brand 4 Logo"
+          />
         </div>
       </section>
     </div>
@@ -144,6 +180,7 @@
             srcset="./img/noman1.png 800w, ./img/noman1.png 400w"
             sizes="(max-width: 768px) 100vw, 400px"
             alt="Abdullah Noman"
+            loading="lazy"
           />
         </div>
 
@@ -154,7 +191,13 @@
             development, Abdullah Noman is a seasoned professional dedicated to
             helping individuals achieve their career goals.
           </p>
-          <button class="black_button" type="button">Learn More</button>
+          <button
+            class="black_button"
+            type="button"
+            aria-label="Learn more about Abdullah Noman"
+          >
+            Learn More
+          </button>
         </div>
 
         <div class="line_wrapper">
@@ -199,30 +242,35 @@
       </section>
 
       <!-- Get to Know Me -->
-      <section class="know_me_section">
-        <div class="know_me_container lg_container">
-          <span class="blur_circle blur_circle--green blob_1"></span>
-          <span class="blur_circle blur_circle--green blob_2"></span>
-          <span class="blur_circle blur_circle--cyan blob_3"></span>
+      <section class="know_me_container lg_container">
+        <span class="blur_circle blur_circle--green blob_1"></span>
+        <span class="blur_circle blur_circle--green blob_2"></span>
+        <span class="blur_circle blur_circle--cyan blob_3"></span>
 
-          <div class="know_me_wrapper">
-            <div class="know_me_text">
-              <h2>Getting to Know Me</h2>
-              <p>
-                From updating work samples to optimizing for mobile devices,
-                Noman will provide you with the knowledge and skills you need to
-                stand out in today's competitive job market.
-              </p>
-              <button class="black_button" type="button">Learn More</button>
-            </div>
-            <div class="know_me_image">
-              <img
-                src="./img/noman2.png"
-                srcset="./img/noman2.png 800w, ./img/noman2.png 400w"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                alt="Abdullah Noman in Action"
-              />
-            </div>
+        <div class="know_me_wrapper">
+          <div class="know_me_text">
+            <h2>Getting to Know Me</h2>
+            <p>
+              From updating work samples to optimizing for mobile devices, Noman
+              will provide you with the knowledge and skills you need to stand
+              out in today's competitive job market.
+            </p>
+            <button
+              class="black_button"
+              type="button"
+              aria-label="Learn more about Noman's services"
+            >
+              Learn More
+            </button>
+          </div>
+          <div class="know_me_image">
+            <img
+              src="./img/noman2.png"
+              srcset="./img/noman2.png 800w, ./img/noman2.png 400w"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              alt="Abdullah Noman in Action"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
@@ -254,6 +302,7 @@
                 sizes="(max-width: 768px) 100vw, 1140px"
                 alt="Podcast Episode Preview"
                 class="podcast_image"
+                loading="lazy"
               />
               <iframe
                 class="podcast_video"
@@ -272,7 +321,11 @@
                 <img src="./img/arrow.png" alt="Play Podcast" />
               </span>
             </div>
-            <button class="cta_button light_button" type="button">
+            <button
+              class="cta_button light_button"
+              type="button"
+              aria-label="View more podcasts"
+            >
               View More
             </button>
           </div>
@@ -297,6 +350,7 @@
                 srcset="./img/ep1.png 350w, ./img/ep1.png 200w"
                 sizes="(max-width: 768px) 100vw, 350px"
                 alt="Episode 1: Get A New Website Done"
+                loading="lazy"
               />
               <div class="episode_text">
                 <h3>Get A New Website Done in Record Time</h3>
@@ -313,6 +367,7 @@
                 srcset="./img/ep2.png 350w, ./img/ep2.png 200w"
                 sizes="(max-width: 768px) 100vw, 350px"
                 alt="Episode 2: Create Enticing Brand"
+                loading="lazy"
               />
               <div class="episode_text">
                 <h3>Create Enticing Brand for A Luxury Gift Brand</h3>
@@ -329,6 +384,7 @@
                 srcset="./img/ep3.png 350w, ./img/ep3.png 200w"
                 sizes="(max-width: 768px) 100vw, 350px"
                 alt="Episode 3: Killer Content Strategy"
+                loading="lazy"
               />
               <div class="episode_text">
                 <h3>
@@ -343,7 +399,13 @@
             </div>
           </div>
 
-          <button class="view_more" type="button">View More</button>
+          <button
+            class="view_more"
+            type="button"
+            aria-label="View more episodes"
+          >
+            View More
+          </button>
 
           <span class="blur_circle blur_circle--cyan blur_blue"></span>
           <span class="blur_circle blur_circle--green blur_green"></span>
@@ -370,6 +432,7 @@
                   sizes="(max-width: 768px) 100vw, 210px"
                   alt="Blog Post: A Piece of Advice"
                   class="blog_card_image"
+                  loading="lazy"
                 />
                 <div class="blog_card_info">
                   <h3 class="blog_card_title">
@@ -386,6 +449,7 @@
                   sizes="(max-width: 768px) 100vw, 210px"
                   alt="Blog Post: From Copywriter to Brand Strategist"
                   class="blog_card_image"
+                  loading="lazy"
                 />
                 <div class="blog_card_info">
                   <h3 class="blog_card_title">
@@ -402,6 +466,7 @@
                   sizes="(max-width: 768px) 100vw, 210px"
                   alt="Blog Post: Freedom, The Most Valuable Currency"
                   class="blog_card_image"
+                  loading="lazy"
                 />
                 <div class="blog_card_info">
                   <h3 class="blog_card_title">
@@ -418,6 +483,7 @@
                   sizes="(max-width: 768px) 100vw, 210px"
                   alt="Blog Post: Interview with Abdullah Noman"
                   class="blog_card_image"
+                  loading="lazy"
                 />
                 <div class="blog_card_info">
                   <h3 class="blog_card_title">Interview with Abdullah Noman</h3>
@@ -433,6 +499,7 @@
                 sizes="(max-width: 768px) 100vw, 648px"
                 alt="Featured Blog: My LinkedIn Journey"
                 class="blog_feature_image"
+                loading="lazy"
               />
               <div class="blog_feature_info">
                 <span class="blog_feature_meta"
@@ -468,93 +535,116 @@
           </div>
 
           <div class="faq_container">
-            <div class="faq_item expanded">
+            <div class="faq_item expanded" role="region" aria-expanded="true">
               <h3>This is what I can help you with.</h3>
-              <p>
-                Rewriting your website? Check.<br />
-                Ad copy, emails… ? Check.<br />
-                LinkedIn? Triple check!!!<br />
-                Working hand-in-hand with you to revamp your entire brand
-                messaging framework for the future? Figuring out social media?
-                Enticing target audiences? Oh, now we're talking!
+              <p class="faq_paragraph">
+                I collaborate closely with clients to understand their goals and
+                tailor strategies that align with their vision. My process
+                involves in-depth research, iterative feedback, and data-driven
+                optimizations to ensure your brand stands out.
               </p>
             </div>
 
-            <div class="faq_item_1" data-expanded="false">
+            <div
+              class="faq_item_1"
+              role="region"
+              data-expanded="false"
+              aria-expanded="false"
+              onclick="toggleFAQ(event)"
+            >
               <div class="faq_title">
-                <h3>This is how I work</h3>
+                <h3>How can copywriting improve my brand?</h3>
                 <img
                   src="./img/add sign.png"
-                  alt="Toggle FAQ"
+                  alt="Expand FAQ"
                   class="faq_toggle_icon"
-                  onclick="toggleFAQ(this)"
                 />
               </div>
               <div class="faq_content" style="display: none">
                 <p>
-                  I collaborate closely with clients to understand their goals
-                  and tailor strategies that align with their vision. My process
-                  involves in-depth research, iterative feedback, and
-                  data-driven optimizations to ensure your brand stands out.
-                </p>
-              </div>
-            </div>
-            <div class="faq_item_1" data-expanded="false">
-              <div class="faq_title">
-                <h3>This is who I work with</h3>
-                <img
-                  src="./img/add sign.png"
-                  alt="Toggle FAQ"
-                  class="faq_toggle_icon"
-                  onclick="toggleFAQ(this)"
-                />
-              </div>
-              <div class="faq_content" style="display: none">
-                <p>
-                  I work with entrepreneurs, small businesses, and professionals
-                  looking to elevate their online presence, particularly on
-                  platforms like LinkedIn, to attract their ideal audience.
-                </p>
-              </div>
-            </div>
-            <div class="faq_item_1" data-expanded="false">
-              <div class="faq_title">
-                <h3>This is my style</h3>
-                <img
-                  src="./img/add sign.png"
-                  alt="Toggle FAQ"
-                  class="faq_toggle_icon"
-                  onclick="toggleFAQ(this)"
-                />
-              </div>
-              <div class="faq_content" style="display: none">
-                <p>
-                  My style is bold, authentic, and strategic, blending
-                  creativity with analytics to craft compelling narratives that
-                  resonate with your target audience.
-                </p>
-              </div>
-            </div>
-            <div class="faq_item_1" data-expanded="false">
-              <div class="faq_title">
-                <h3>This is how much I charge</h3>
-                <img
-                  src="./img/add sign.png"
-                  alt="Toggle FAQ"
-                  class="faq_toggle_icon"
-                  onclick="toggleFAQ(this)"
-                />
-              </div>
-              <div class="faq_content" style="display: none">
-                <p>
-                  My pricing is tailored to the scope of each project. Contact
-                  me to discuss your needs, and I’ll provide a customized quote
-                  that fits your budget and goals.
+                  Effective copywriting creates compelling narratives that
+                  resonate with your audience, driving engagement and
+                  conversions.
                 </p>
               </div>
             </div>
 
-            <button class="cta_button" type="button">
+            <div
+              class="faq_item_1"
+              role="region"
+              data-expanded="false"
+              aria-expanded="false"
+              onclick="toggleFAQ(event)"
+            >
+              <div class="faq_title">
+                <h3>What is your process for brand strategy?</h3>
+                <img
+                  src="./img/add sign.png"
+                  alt="Expand FAQ"
+                  class="faq_toggle_icon"
+                />
+              </div>
+              <div class="faq_content" style="display: none">
+                <p>
+                  I conduct in-depth market research, define your brand’s unique
+                  value proposition, and develop strategies to position you
+                  effectively.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="faq_item_1"
+              role="region"
+              data-expanded="false"
+              aria-expanded="false"
+              onclick="toggleFAQ(event)"
+            >
+              <div class="faq_title">
+                <h3>How long does a typical project take?</h3>
+                <img
+                  src="./img/add sign.png"
+                  alt="Expand FAQ"
+                  class="faq_toggle_icon"
+                />
+              </div>
+              <div class="faq_content" style="display: none">
+                <p>
+                  Project timelines vary, but most copywriting and branding
+                  projects take 2-6 weeks, depending on complexity and client
+                  feedback.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="faq_item_1"
+              role="region"
+              data-expanded="false"
+              aria-expanded="false"
+              onclick="toggleFAQ(event)"
+            >
+              <div class="faq_title">
+                <h3>Can you help with LinkedIn optimization?</h3>
+                <img
+                  src="./img/add sign.png"
+                  alt="Expand FAQ"
+                  class="faq_toggle_icon"
+                />
+              </div>
+              <div class="faq_content" style="display: none">
+                <p>
+                  Yes, I offer personalized LinkedIn profile optimization and
+                  content strategies to enhance your professional presence.
+                </p>
+              </div>
+            </div>
+
+            <button
+              class="cta_button"
+              type="button"
+              aria-label="Contact for more information"
+            >
               Just say “hi” and I’ll reach out
             </button>
           </div>
@@ -571,9 +661,16 @@
             anytime :) If you press the button below, you consent to the
             occasional 3am rant about buzzwords like "synergy".
           </p>
-          <form class="newsletter-form">
-            <input type="email" placeholder="E-mail address" required />
-            <button type="submit">I Volunteer My Inbox</button>
+          <form class="newsletter-form" action="/subscribe" method="POST">
+            <input
+              type="email"
+              placeholder="E-mail address"
+              required
+              aria-label="Enter your email address"
+            />
+            <button type="submit" aria-label="Subscribe to newsletter">
+              I Volunteer My Inbox
+            </button>
           </form>
         </section>
 
@@ -581,68 +678,70 @@
           <div class="footer-col">
             <h4>Company</h4>
             <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Leadership</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Referral Program</a></li>
-              <li><a href="#">Community</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/leadership.html">Leadership</a></li>
+              <li><a href="/blog.html">Blog</a></li>
+              <li><a href="/careers.html">Careers</a></li>
+              <li><a href="/referral.html">Referral Program</a></li>
+              <li><a href="/community.html">Community</a></li>
             </ul>
           </div>
 
           <div class="footer-col">
             <h4>Product</h4>
             <ul>
-              <li><a href="#">Overview</a></li>
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">Documentation</a></li>
-              <li><a href="#">Tools & Integration</a></li>
-              <li><a href="#">Releases</a></li>
+              <li><a href="/overview.html">Overview</a></li>
+              <li><a href="/features.html">Features</a></li>
+              <li><a href="/pricing.html">Pricing</a></li>
+              <li><a href="/documentation.html">Documentation</a></li>
+              <li><a href="/tools.html">Tools & Integration</a></li>
+              <li><a href="/releases.html">Releases</a></li>
             </ul>
           </div>
 
           <div class="footer-col">
             <h4>Support</h4>
             <ul>
-              <li><a href="#">Help Centre</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Press</a></li>
-              <li><a href="#">Status</a></li>
+              <li><a href="/help.html">Help Centre</a></li>
+              <li><a href="/faq.html">FAQ</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+              <li><a href="/press.html">Press</a></li>
+              <li><a href="/status.html">Status</a></li>
             </ul>
           </div>
 
           <div class="footer-col">
             <h4>Social</h4>
             <ul>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">LinkedIn</a></li>
-              <li><a href="#">Github</a></li>
+              <li><a href="https://instagram.com/optifolio">Instagram</a></li>
+              <li><a href="https://twitter.com/optifolio">Twitter</a></li>
+              <li><a href="https://facebook.com/optifolio">Facebook</a></li>
+              <li>
+                <a href="https://linkedin.com/in/abdullahnoman">LinkedIn</a>
+              </li>
+              <li><a href="https://github.com/optifolio">Github</a></li>
             </ul>
           </div>
 
           <div class="footer-col">
             <h4>Legal</h4>
             <ul>
-              <li><a href="#">Legal Notice</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms of Use</a></li>
+              <li><a href="/legal.html">Legal Notice</a></li>
+              <li><a href="/privacy.html">Privacy Policy</a></li>
+              <li><a href="/terms.html">Terms of Use</a></li>
             </ul>
             <div class="footer-icons">
-              <a href="#" class="icon"
-                ><img src="./img/ig.png" alt="Instagram"
+              <a href="https://instagram.com/optifolio" class="icon"
+                ><img src="./img/ig.png" alt="Instagram profile link"
               /></a>
-              <a href="#" class="icon"
-                ><img src="./img/linkedin.png" alt="LinkedIn"
+              <a href="https://linkedin.com/in/abdullahnoman" class="icon"
+                ><img src="./img/linkedin.png" alt="LinkedIn profile link"
               /></a>
-              <a href="#" class="icon"
-                ><img src="./img/twitter.png" alt="Twitter"
+              <a href="https://twitter.com/optifolio" class="icon"
+                ><img src="./img/twitter.png" alt="Twitter profile link"
               /></a>
-              <a href="#" class="icon"
-                ><img src="./img/youtube.png" alt="YouTube"
+              <a href="https://youtube.com/optifolio" class="icon"
+                ><img src="./img/youtube.png" alt="YouTube channel link"
               /></a>
             </div>
           </div>
@@ -667,51 +766,94 @@
         .addEventListener('change', function () {
           const navMenu = document.getElementById('navMenu');
           navMenu.style.display = this.checked ? 'flex' : 'none';
+          navMenu.setAttribute(
+            'aria-expanded',
+            this.checked ? 'true' : 'false'
+          );
         });
 
-      // FAQ Toggle
-      document.querySelectorAll('.faq_item').forEach((item) => {
-        item.addEventListener('click', () => {
-          item.classList.toggle('expanded');
-        });
+      // Reset menu state on resize
+      window.addEventListener('resize', () => {
+        const navMenu = document.getElementById('navMenu');
+        const hamburgerToggle = document.getElementById('hamburger-toggle');
+        if (window.innerWidth > 768) {
+          navMenu.style.display = 'flex';
+          navMenu.setAttribute('aria-expanded', 'true');
+          hamburgerToggle.checked = false;
+        } else {
+          navMenu.style.display = hamburgerToggle.checked ? 'flex' : 'none';
+          navMenu.setAttribute(
+            'aria-expanded',
+            hamburgerToggle.checked ? 'true' : 'false'
+          );
+        }
       });
 
+      // Video Playback
       function playVideo() {
         const image = document.querySelector('.podcast_image');
         const video = document.querySelector('.podcast_video');
         const playCircle = document.querySelector('.podcast_play_circle');
 
+        if (!video) {
+          console.error('YouTube iframe not found');
+          return;
+        }
+
         image.style.display = 'none';
         video.style.display = 'block';
         playCircle.style.display = 'none';
 
-        // Trigger YouTube video playback
-        video.contentWindow.postMessage(
-          '{"event":"command","func":"playVideo","args":""}',
-          '*'
-        );
+        try {
+          video.contentWindow.postMessage(
+            '{"event":"command","func":"playVideo","args":""}',
+            '*'
+          );
+        } catch (e) {
+          console.error('Error triggering YouTube video:', e);
+        }
       }
 
-      function toggleFAQ(element) {
-        const faqItem = element.closest('.faq_item_1');
+      // FAQ Toggle
+      function toggleFAQ(event) {
+        const faqItem = event.currentTarget;
         const content = faqItem.querySelector('.faq_content');
         const icon = faqItem.querySelector('.faq_toggle_icon');
         const isExpanded = faqItem.getAttribute('data-expanded') === 'true';
 
+        if (!content || !icon) {
+          console.error('FAQ content or icon not found');
+          return;
+        }
+
         if (isExpanded) {
           content.style.display = 'none';
           faqItem.setAttribute('data-expanded', 'false');
+          faqItem.setAttribute('aria-expanded', 'false');
           faqItem.classList.remove('expanded');
           icon.src = './img/add sign.png';
-          icon.alt = 'Toggle FAQ';
+          icon.alt = 'Expand FAQ';
         } else {
           content.style.display = 'block';
           faqItem.setAttribute('data-expanded', 'true');
+          faqItem.setAttribute('aria-expanded', 'true');
           faqItem.classList.add('expanded');
-          icon.src = './img/minus sign.png';
+          icon.src = './img/minus.png';
           icon.alt = 'Collapse FAQ';
         }
       }
+
+      // Newsletter Form Validation
+      document
+        .querySelector('.newsletter-form')
+        .addEventListener('submit', (e) => {
+          const email = e.target.querySelector('input[type="email"]').value;
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            e.preventDefault();
+            alert('Please enter a valid email address');
+          }
+        });
     </script>
   </body>
 </html>
