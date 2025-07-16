@@ -47,6 +47,7 @@
     <link rel="manifest" href="/manifest.json" />
     <link rel="icon" type="image/x-icon" href="./SVG/logosvg.ico" />
     <title>OptiFolio - Copywriting & Brand Strategy</title>
+    <script src="./script.js"></script>
   </head>
   <body>
     <div class="banner_wrapper">
@@ -767,102 +768,5 @@
         </div>
       </div>
     </footer>
-
-    <script src="./script.js">
-      // // Hamburger Menu Toggle
-      // document
-      //   .getElementById('hamburger-toggle')
-      //   .addEventListener('change', function () {
-      //     const navMenu = document.getElementById('navMenu');
-      //     navMenu.style.display = this.checked ? 'flex' : 'none';
-      //     navMenu.setAttribute(
-      //       'aria-expanded',
-      //       this.checked ? 'true' : 'false'
-      //     );
-      //   });
-
-      // // Reset menu state on resize
-      // window.addEventListener('resize', () => {
-      //   const navMenu = document.getElementById('navMenu');
-      //   const hamburgerToggle = document.getElementById('hamburger-toggle');
-      //   if (window.innerWidth > 768) {
-      //     navMenu.style.display = 'flex';
-      //     navMenu.setAttribute('aria-expanded', 'true');
-      //     hamburgerToggle.checked = false;
-      //   } else {
-      //     navMenu.style.display = hamburgerToggle.checked ? 'flex' : 'none';
-      //     navMenu.setAttribute(
-      //       'aria-expanded',
-      //       hamburgerToggle.checked ? 'true' : 'false'
-      //     );
-      //   }
-      // });
-
-      // // Video Playback
-      // function playVideo() {
-      //   const image = document.querySelector('.podcast_image');
-      //   const video = document.querySelector('.podcast_video');
-      //   const playCircle = document.querySelector('.podcast_play_circle');
-
-      //   if (!video) {
-      //     console.error('YouTube iframe not found');
-      //     return;
-      //   }
-
-      //   image.style.display = 'none';
-      //   video.style.display = 'block';
-      //   playCircle.style.display = 'none';
-
-      //   try {
-      //     video.contentWindow.postMessage(
-      //       '{"event":"command","func":"playVideo","args":""}',
-      //       '*'
-      //     );
-      //   } catch (e) {
-      //     console.error('Error triggering YouTube video:', e);
-      //   }
-      // }
-
-      // // FAQ Toggle
-      // function toggleFAQ(event) {
-      //   const faqItem = event.currentTarget;
-      //   const content = faqItem.querySelector('.faq_content');
-      //   const icon = faqItem.querySelector('.faq_toggle_icon');
-      //   const isExpanded = faqItem.getAttribute('data-expanded') === 'true';
-
-      //   if (!content || !icon) {
-      //     console.error('FAQ content or icon not found');
-      //     return;
-      //   }
-
-      //   if (isExpanded) {
-      //     content.style.display = 'none';
-      //     faqItem.setAttribute('data-expanded', 'false');
-      //     faqItem.setAttribute('aria-expanded', 'false');
-      //     faqItem.classList.remove('expanded');
-      //     icon.src = './img/add sign.png';
-      //     icon.alt = 'Expand FAQ';
-      //   } else {
-      //     content.style.display = 'block';
-      //     faqItem.setAttribute('data-expanded', 'true');
-      //     faqItem.setAttribute('aria-expanded', 'true');
-      //     faqItem.classList.add('expanded');
-      //     icon.src = './img/minus.png';
-      //     icon.alt = 'Collapse FAQ';
-      //   }
-      // }
-
-      // // Newsletter Form Validation
-      // documents
-      //   .querySelector('.newsletter-form')
-      //   .addEventListener('submit', (e) => {
-      //     const email = e.target.querySelector('input[type="email"]').value;
-      //     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      //     if (!emailRegex.test(email)) {
-      //       e.preventDefault();
-      //       alert('Please enter a valid email address');
-      //     }
-      //   });
-    </script>
   </body>
 </html>
