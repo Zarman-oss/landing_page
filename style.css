@@ -1579,6 +1579,7 @@ display: flex;
   .know_me_text h2 {
     font-size: var(--h2-heading);
     line-height: var(--h2-line);
+    text-align: center;
   }
 
   .know_me_text {
